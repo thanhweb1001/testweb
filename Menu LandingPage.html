@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+#minigame {
+width: 100%;
+background: url("https://static.wixstatic.com/media/f8e5f1_424474676f6743308baaf70ccf54d232~mv2.jpg/v1/fill/w_3815,h_1650,al_c,q_90,usm_0.66_1.00_0.01/f8e5f1_424474676f6743308baaf70ccf54d232~mv2.webp");
+height: 100vh;
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+overflow: scroll;
+padding: 30px 0;
+overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+.box-demo-1 {
+width: 80%;
+border: 2px solid #000;
+margin: 50px auto;
+text-align: center;
+height: 90vh;
+background: aliceblue;
+}
+.box-demo-2 {
+width: 80%;
+height: 90vh;
+border: 2px solid #000;
+margin: 50px auto;
+text-align: center;
+background: aliceblue;
+}
+</style>
+</head>
+<body>
+<link href="./biolla-style.css" rel="stylesheet">
+<div class="nav_landing" id="nav_landing">
+  <a href="#game" class="nav_link nav_link_active">
+    <i class="icon-game nav_icon"></i>
+    <span class="nav_text">Game</span>
+  </a>
+  <a href="#bang-xep-hang" class="nav_link">
+    <i class="icon-bang-xep-hang nav_icon"></i>
+    <span class="nav_text">Bảng Xếp Hạng</span>
+  </a>
+  <a href="#huong-dan" class="nav_link">
+    <i class="icon-huong-dan nav_icon"></i>
+    <span class="nav_text">Hướng Dẫn - Thể Lệ</span>
+  </a>
+  <a href="#sua-bap" class="nav_link">
+    <i class="icon-sua-bap nav_icon"></i>
+    <span class="nav_text">Sữa Bắp</span>
+  </a>
+  <a href="#danh-gia" class="nav_link">
+    <i class="icon-danh-gia nav_icon"></i>
+    <span class="nav_text">Đánh Giá</span>
+  </a>
+  <a href="#" class="nav_link">
+    <i class="icon-dat-hang nav_icon"></i>
+    <span class="nav_text">Đặt Hàng</span>
+  </a>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+$(document).ready(function() {
+		$('a[href*=\\#]').bind('click', function(e) {
+				e.preventDefault(); // prevent hard jump, the default behavior
+
+				var target = $(this).attr("href"); // Set the target as variable
+
+				// perform animated scrolling by getting top-position of target-element and set it as scroll target
+				$('html, body').stop().animate({
+						scrollTop: $(target).offset().top
+				}, 600, function() {
+						location.hash = target; //attach the hash (#jumptarget) to the pageurl
+				});
+
+				return false;
+		});
+});
+
+$(window).scroll(function() {
+		var scrollDistance = $(window).scrollTop();
+
+		// Show/hide menu on scroll
+		//if (scrollDistance >= 850) {
+		//		$('nav').fadeIn("fast");
+		//} else {
+		//		$('nav').fadeOut("fast");
+		//}
+	
+		// Assign active class to nav links while scolling
+		$('.page-section').each(function(i) {
+				if ($(this).position().top <= scrollDistance + 200) {
+						$('.nav_landing a.nav_link_active').removeClass('nav_link_active');
+						$('.nav_landing a').eq(i).addClass('nav_link_active');
+				}
+		});
+}).scroll();
+</script>
+
+<div id="game" class="page-section box-demo-2">
+<h3>Mini Game</h3>
+</div>
+<div id="bang-xep-hang" class="page-section box-demo-2">>
+<h3>Bảng Xếp Hạng</h3>
+</div>
+<div id="huong-dan" class="page-section box-demo-1">
+<h3>Hướng Dẫn</h3>
+</div>
+<div id="sua-bap" class="page-section box-demo-2">
+<h3>Sua Bap</h3>
+</div>
+<div id="danh-gia" class="page-section box-demo-2">
+<h3>Đánh Giá</h3>
+</div>
+
+
+</body>
+
+</html>
