@@ -161,6 +161,30 @@ body {
 }
 
 }/* 414>799*/
+@media only screen and (max-width: 639px) {
+	
+#logo img {
+	margin: 15px auto 30px;
+	width: 20%;
+}
+#head-left, #head-right {
+	width: 70%;
+}
+#head-left img, #head-right img {
+	width: 70%;
+}
+#head-left {
+	margin-bottom: 5px;
+}
+#head-right {
+	margin-bottom: 10px;
+}
+
+#DateCountdown {
+	width: 90%;
+}
+
+}
 
 /**
  *	This element is created inside your target element
