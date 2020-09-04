@@ -50,6 +50,9 @@ $("#DateCountdown").TimeCircles({
     }
 });
 
+$(window).resize(function(){
+    $("#DateCountdown").TimeCircles().rebuild();
+});
 $(function () {
 	    setInterval(function () {
 		    $('.star-1').fadeOut(150).delay(2000).fadeIn(300).fadeOut(150).delay(1254);
