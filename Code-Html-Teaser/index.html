@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Teaser</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="timejs.js"></script>
+<link href="stylev1.css" rel="stylesheet">     
+<div id="main">
+<div class="star star-1"></div>
+<div class="star star-2"></div>
+<div class="star star-3"></div>
+<div class="star star-4"></div>
+<div class="star star-5"></div>
+<div class="star star-6"></div>
+<div class="star star-7"></div>
+<div id="logo"><img src="biolla.png"/></div>
+<div id="head-left"><img src="cho-don-biolla.png"/></div>
+<div id="head-right"><img src="mo-ra-bi-mat.png"/></div>
+<div id="DateCountdown" data-date="2020-09-25 00:00:00"></div>
+<script>
+$("#DateCountdown").TimeCircles({
+    "animation": "smooth",
+    "bg_width": 1.9,
+    "fg_width": 0.04,
+    "circle_bg_color": "#ffffff",
+    "time": {
+        "Days": {
+            "text": "Ngày",
+            "color": "#FFCC66",
+            "show": true
+        },
+        "Hours": {
+            "text": "Giờ",
+            "color": "#F15A29",
+            "show": true
+        },
+        "Minutes": {
+            "text": "Phút",
+            "color": "#F79037",
+            "show": true
+        },
+        "Seconds": {
+            "text": "Giây",
+            "color": "#C40E2E",
+            "show": true
+        }
+    }
+});
+
+$(function () {
+	    setInterval(function () {
+		    $('.star-1').fadeOut(150).delay(2000).fadeIn(300).fadeOut(150).delay(1254);
+	        $('.star-2').fadeOut(300).fadeIn(120).fadeOut(120).delay(1920);
+	        $('.star-3').fadeOut(150).delay(1200).fadeIn(300).fadeOut(150).delay(800);
+	        $('.star-4').fadeOut(700).fadeIn(300).fadeOut(160).delay(1350);
+			$('.star-6').fadeOut(150).delay(2000).fadeIn(300).fadeOut(150).delay(1254);
+			$('.star-5').fadeOut(150).delay(1200).fadeIn(300).fadeOut(150).delay(800);
+			$('.star-7').fadeOut(700).fadeIn(300).fadeOut(160).delay(1350);
+	    }, 1);
+    });
+</script>
+</div>
+
+</body>
+</html>
