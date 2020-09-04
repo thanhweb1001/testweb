@@ -93,7 +93,7 @@ body {
 @media only screen and (min-width: 1700px) {
 	
 #logo img {
-	margin: 60px auto 50px;
+	margin: 0 auto 50px;
 	width: 15%;
 }
 #head-left, #head-right {
@@ -115,7 +115,7 @@ body {
 @media only screen and (min-width: 800px) and (max-width: 1699px) {
 	
 #logo img {
-	margin: 20px auto 20px;
+	margin: 0 auto 20px;
 	width: 20%;
 }
 #head-left, #head-right {
@@ -140,7 +140,7 @@ body {
 @media only screen and (min-width: 640px) and (max-width: 799px) {
 	
 #logo img {
-	margin: 15px auto 15px;
+	margin: 0 auto 15px;
 	width: 20%;
 }
 #head-left, #head-right {
