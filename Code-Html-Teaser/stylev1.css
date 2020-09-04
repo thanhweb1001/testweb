@@ -164,11 +164,11 @@ body {
 @media only screen and (max-width: 639px) {
 	
 #logo img {
-	margin: 15px auto 30px;
-	width: 20%;
+	margin: 0px auto 30px;
+	width: 30%;
 }
 #head-left, #head-right {
-	width: 70%;
+	width: 80%;
 }
 #head-left img, #head-right img {
 	width: 70%;
