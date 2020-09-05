@@ -398,11 +398,11 @@ body {
 /*Font Icon*/
 @font-face {
   font-family: 'biollamenuv1';
-  src:  url('fonts_biolla/biollamenuv1.eot?cuooxz');
-  src:  url('fonts_biolla/biollamenuv1.eot?cuooxz#iefix') format('embedded-opentype'),
-    url('fonts_biolla/biollamenuv1.ttf?cuooxz') format('truetype'),
-    url('fonts_biolla/biollamenuv1.woff?cuooxz') format('woff'),
-    url('fonts_biolla/biollamenuv1.svg?cuooxz#biollamenuv1') format('svg');
+  src:  url('fonts_biolla/biollamenuv1.eot?ktqkjs');
+  src:  url('fonts_biolla/biollamenuv1.eot?ktqkjs#iefix') format('embedded-opentype'),
+    url('fonts_biolla/biollamenuv1.ttf?ktqkjs') format('truetype'),
+    url('fonts_biolla/biollamenuv1.woff?ktqkjs') format('woff'),
+    url('fonts_biolla/biollamenuv1.svg?ktqkjs#biollamenuv1') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -423,21 +423,35 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-[class^="biolla-"], [class*=" biolla-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'biollamenuv1' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.biolla-hotline .path1:before {
+  content: "\e900";
+  color: rgb(235, 186, 22);
 }
-
+.biolla-hotline .path2:before {
+  content: "\e945";
+  margin-left: -1em;
+  color: rgb(235, 186, 22);
+}
+.biolla-hotline .path3:before {
+  content: "\e946";
+  margin-left: -1em;
+  color: rgb(235, 186, 22);
+}
+.biolla-hotline .path4:before {
+  content: "\e947";
+  margin-left: -1em;
+  color: rgb(135, 75, 0);
+}
+.biolla-hotline .path5:before {
+  content: "\e948";
+  margin-left: -1em;
+  color: rgb(54, 30, 0);
+}
+.biolla-hotline .path6:before {
+  content: "\e949";
+  margin-left: -1em;
+  color: rgb(54, 30, 0);
+}
 .biolla-suabapnon .path1:before {
   content: "\e901";
   color: rgb(137, 82, 0);
@@ -764,9 +778,6 @@ body {
   content: "\e944";
   margin-left: -1em;
   color: rgb(0, 0, 0);
-}
-.biolla-hotline:before {
-  content: "\e900";
 }
 .biolla-game:before {
   content: "\e904";
