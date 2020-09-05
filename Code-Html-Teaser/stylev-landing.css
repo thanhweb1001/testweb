@@ -1,0 +1,776 @@
+body {
+	margin: 0!important;
+}
+ #containter {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center; 
+	justify-content: center;
+	background-image: url("background-mini-games.png");
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover;
+   }
+/*Star*/
+.star {
+  position: absolute;
+  background: url(https://mtedwards.s3.amazonaws.com/sparkle.png) no-repeat;
+  background-size: contain;
+  overflow: hidden;
+}
+.star.star-1 {
+  width: 50px;
+  height: 34px;
+  top: 38%;
+  left: 59%;
+}
+.star.star-2 {
+  width: 83px;
+  height: 77px;
+  top: 30%;
+  left: 29%;
+}
+.star.star-3 {
+  width: 74px;
+  height: 70px;
+  top: 35%;
+  left: 37%;
+}
+.star.star-4 {
+  width: 68px;
+  height: 70px;
+  top: 44%;
+  left: 48%;
+}
+.star.star-5 {
+  width: 74px;
+  height: 70px;
+  top: 70%;
+  left: 19%;
+}
+.star.star-6 {
+  width: 50px;
+  height: 34px;
+  top: 51%;
+  left: 61%;
+}
+.star.star-7 {
+  width: 83px;
+  height: 77px;
+  top: 55%;
+  left: 74%;
+}
+/*end*/
+
+#main {
+	width: 100%;
+}
+#logo {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+}
+
+#logo img {
+	height: auto;
+}
+#head-left, #head-right {
+	margin: 0 auto;
+	clear: both;
+}
+#head-left {
+	text-align:left;
+}
+#head-right {
+	text-align:right;
+}
+
+#DateCountdown {
+	margin: 0 auto;
+}
+
+@-webkit-keyframes spaceboots {
+  0% {
+    -webkit-transform: translate(2px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    -webkit-transform: translate(0px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(2px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: translate(2px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.shake {
+  -webkit-animation-name: spaceboots;
+  -webkit-animation-duration: 2s;
+  -webkit-transform-origin: 50% 50%;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+}
+
+@media only screen and (min-width: 1700px) {
+	
+#logo img {
+	margin: 0 auto 50px;
+	width: 15%;
+}
+#head-left, #head-right {
+	width: 50%;
+}
+#head-left {
+	margin-bottom: 40px;
+}
+#head-right {
+	margin-bottom: 40px;
+}
+
+#DateCountdown {
+	width: 70%;
+}
+
+}/* >1700 */
+
+@media only screen and (min-width: 800px) and (max-width: 1699px) {
+	
+#logo img {
+	margin: 0 auto 20px;
+	width: 20%;
+}
+#head-left, #head-right {
+	width: 60%;
+}
+#head-left img, #head-right img {
+	width: 70%;
+}
+#head-left {
+	margin-bottom: 15px;
+}
+#head-right {
+	margin-bottom: 0px;
+}
+
+#DateCountdown {
+	width: 80%;
+}
+
+}/* 1280>1699 */
+
+@media only screen and (min-width: 640px) and (max-width: 799px) {
+	
+#logo img {
+	margin: 0 auto 15px;
+	width: 20%;
+}
+#head-left, #head-right {
+	width: 70%;
+}
+#head-left img, #head-right img {
+	width: 70%;
+}
+#head-left {
+	margin-bottom: 5px;
+}
+#head-right {
+	margin-bottom: 10px;
+}
+
+#DateCountdown {
+	width: 90%;
+}
+
+}/* 414>799*/
+@media only screen and (max-width: 639px) {
+	
+#logo img {
+	margin: 0px auto 30px;
+	width: 30%;
+}
+#head-left, #head-right {
+	width: 80%;
+}
+#head-left img, #head-right img {
+	width: 70%;
+}
+#head-left {
+	margin-bottom: 5px;
+}
+#head-right {
+	margin-bottom: 10px;
+}
+
+#DateCountdown {
+	width: 90%;
+}
+
+}
+
+/**
+ *	This element is created inside your target element
+ *	It is used so that your own element will not need to be altered
+ **/
+.time_circles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/**
+ *	This is all the elements used to house all text used
+ * in time circles
+ **/
+.time_circles > div {
+    position: absolute;
+    text-align: center;
+}
+
+/**
+ *	Titles (Days, Hours, etc)
+ **/
+.time_circles > div > h4 {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Century Gothic', Arial;
+	color: #58595B;
+}
+
+/**
+ *	Time numbers, ie: 12
+ **/
+.time_circles > div > span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Century Gothic', Arial;
+    font-size: 300%;
+    margin-top: 0.4em;
+    font-weight: bold;
+	color: #58595B;
+}
+
+/* Menu */
+.nav_landing {
+    position: fixed;
+}
+
+.nav_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #444444;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.nav_link:hover {
+    background-color: #eeeeee;
+}
+
+.nav_link_active {
+    color: #C30E2E;
+}
+
+
+.nav_text {
+	display: none;
+}
+.nav_link:first-child {
+	background: #FFDD00;
+	color: #C30E2E;
+}
+.nav_link:last-child {
+	background: #C30E2E;
+	color: #ffffff;
+}
+.nav_link:nth-child(5) {
+	color: #440000;
+}
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}
+
+.nav_link:last-child i, .nav_link:first-child i {
+	animation: heartbeat 3s infinite;
+}
+
+/* @media only screen and (max-width: 480px){*/
+	.nav_landing {
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 50px;
+		box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+		background-color: #ffffff;
+		display: flex;
+		overflow-x: auto;
+	}
+	.nav_icon {
+		font-size: 25px;
+	}
+	.nav_link_active .nav_icon {
+		font-size: 35px;
+	}
+/*}*/
+
+/*@media only screen and (min-width: 481px){
+	.nav_landing {
+		top: 15%;
+		right: 0;
+		width: 50px;
+		height: 300px;
+		box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+		background-color: #ffffff;
+		display: inline;
+	}
+	.nav_landing a {
+		clear: right;
+		float: right;
+		height: 50px;
+	}
+	.nav_icon {
+		font-size: 25px;
+	}
+	.nav_link_active .nav_icon {
+		font-size: 35px;
+	}
+}*/
+/*Font Icon*/
+@font-face {
+  font-family: 'biollamenuv1';
+  src:  url('fonts_biolla/biollamenuv1.eot?cuooxz');
+  src:  url('fonts_biolla/biollamenuv1.eot?cuooxz#iefix') format('embedded-opentype'),
+    url('fonts_biolla/biollamenuv1.ttf?cuooxz') format('truetype'),
+    url('fonts_biolla/biollamenuv1.woff?cuooxz') format('woff'),
+    url('fonts_biolla/biollamenuv1.svg?cuooxz#biollamenuv1') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="biolla-"], [class*=" biolla-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'biollamenuv1' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="biolla-"], [class*=" biolla-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'biollamenuv1' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.biolla-suabapnon .path1:before {
+  content: "\e901";
+  color: rgb(137, 82, 0);
+}
+.biolla-suabapnon .path2:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(227, 149, 16);
+}
+.biolla-suabapnon .path3:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(227, 149, 16);
+}
+.biolla-suabapnon .path4:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(227, 149, 16);
+}
+.biolla-suabapnon .path5:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(227, 149, 16);
+}
+.biolla-suabapnon .path6:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(227, 149, 16);
+}
+.biolla-suabapnon .path7:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(227, 149, 16);
+}
+.biolla-suabapnon .path8:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(227, 149, 16);
+}
+.biolla-suabapnon .path9:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(227, 149, 16);
+}
+.biolla-suabapnon .path10:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(227, 149, 16);
+}
+.biolla-suabapnon .path11:before {
+  content: "\e90d";
+  margin-left: -1em;
+  color: rgb(227, 149, 16);
+}
+.biolla-suabapnon .path12:before {
+  content: "\e90e";
+  margin-left: -1em;
+  color: rgb(227, 149, 16);
+}
+.biolla-suabapnon .path13:before {
+  content: "\e90f";
+  margin-left: -1em;
+  color: rgb(227, 149, 16);
+}
+.biolla-suabapnon .path14:before {
+  content: "\e910";
+  margin-left: -1em;
+  color: rgb(227, 149, 16);
+}
+.biolla-suabapnon .path15:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: rgb(227, 149, 16);
+}
+.biolla-suabapnon .path16:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(227, 149, 16);
+}
+.biolla-suabapnon .path17:before {
+  content: "\e913";
+  margin-left: -1em;
+  color: rgb(227, 149, 16);
+}
+.biolla-suabapnon .path18:before {
+  content: "\e914";
+  margin-left: -1em;
+  color: rgb(227, 149, 16);
+}
+.biolla-suabapnon .path19:before {
+  content: "\e915";
+  margin-left: -1em;
+  color: rgb(227, 149, 16);
+}
+.biolla-suabapnon .path20:before {
+  content: "\e916";
+  margin-left: -1em;
+  color: rgb(243, 208, 53);
+}
+.biolla-suabapnon .path21:before {
+  content: "\e917";
+  margin-left: -1em;
+  color: rgb(243, 208, 53);
+}
+.biolla-suabapnon .path22:before {
+  content: "\e918";
+  margin-left: -1em;
+  color: rgb(243, 208, 53);
+}
+.biolla-suabapnon .path23:before {
+  content: "\e919";
+  margin-left: -1em;
+  color: rgb(243, 208, 53);
+}
+.biolla-suabapnon .path24:before {
+  content: "\e91a";
+  margin-left: -1em;
+  color: rgb(243, 208, 53);
+}
+.biolla-suabapnon .path25:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(243, 208, 53);
+}
+.biolla-suabapnon .path26:before {
+  content: "\e91c";
+  margin-left: -1em;
+  color: rgb(243, 208, 53);
+}
+.biolla-suabapnon .path27:before {
+  content: "\e91d";
+  margin-left: -1em;
+  color: rgb(243, 208, 53);
+}
+.biolla-suabapnon .path28:before {
+  content: "\e91e";
+  margin-left: -1em;
+  color: rgb(243, 208, 53);
+}
+.biolla-suabapnon .path29:before {
+  content: "\e91f";
+  margin-left: -1em;
+  color: rgb(243, 208, 53);
+}
+.biolla-suabapnon .path30:before {
+  content: "\e920";
+  margin-left: -1em;
+  color: rgb(243, 208, 53);
+}
+.biolla-suabapnon .path31:before {
+  content: "\e921";
+  margin-left: -1em;
+  color: rgb(243, 208, 53);
+}
+.biolla-suabapnon .path32:before {
+  content: "\e922";
+  margin-left: -1em;
+  color: rgb(243, 208, 53);
+}
+.biolla-suabapnon .path33:before {
+  content: "\e923";
+  margin-left: -1em;
+  color: rgb(243, 208, 53);
+}
+.biolla-suabapnon .path34:before {
+  content: "\e924";
+  margin-left: -1em;
+  color: rgb(243, 208, 53);
+}
+.biolla-suabapnon .path35:before {
+  content: "\e925";
+  margin-left: -1em;
+  color: rgb(164, 165, 48);
+}
+.biolla-suabapnon .path36:before {
+  content: "\e926";
+  margin-left: -1em;
+  color: rgb(137, 138, 37);
+}
+.biolla-suabapnon .path37:before {
+  content: "\e927";
+  margin-left: -1em;
+  color: rgb(184, 186, 56);
+}
+.biolla-suabapnon .path38:before {
+  content: "\e928";
+  margin-left: -1em;
+  color: rgb(164, 165, 48);
+}
+.biolla-suabapnon .path39:before {
+  content: "\e929";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.biolla-suagaolut .path1:before {
+  content: "\e92a";
+  color: rgb(254, 218, 155);
+}
+.biolla-suagaolut .path2:before {
+  content: "\e92b";
+  margin-left: -1em;
+  color: rgb(254, 218, 155);
+}
+.biolla-suagaolut .path3:before {
+  content: "\e92c";
+  margin-left: -1em;
+  color: rgb(255, 198, 108);
+}
+.biolla-suagaolut .path4:before {
+  content: "\e92d";
+  margin-left: -1em;
+  color: rgb(255, 198, 108);
+}
+.biolla-suagaolut .path5:before {
+  content: "\e92e";
+  margin-left: -1em;
+  color: rgb(254, 218, 155);
+}
+.biolla-suagaolut .path6:before {
+  content: "\e92f";
+  margin-left: -1em;
+  color: rgb(255, 198, 108);
+}
+.biolla-suagaolut .path7:before {
+  content: "\e930";
+  margin-left: -1em;
+  color: rgb(254, 218, 155);
+}
+.biolla-suagaolut .path8:before {
+  content: "\e931";
+  margin-left: -1em;
+  color: rgb(255, 198, 108);
+}
+.biolla-suagaolut .path9:before {
+  content: "\e932";
+  margin-left: -1em;
+  color: rgb(254, 218, 155);
+}
+.biolla-suagaolut .path10:before {
+  content: "\e933";
+  margin-left: -1em;
+  color: rgb(160, 229, 87);
+}
+.biolla-suagaolut .path11:before {
+  content: "\e934";
+  margin-left: -1em;
+  color: rgb(216, 251, 147);
+}
+.biolla-suagaolut .path12:before {
+  content: "\e935";
+  margin-left: -1em;
+  color: rgb(160, 229, 87);
+}
+.biolla-suagaolut .path13:before {
+  content: "\e936";
+  margin-left: -1em;
+  color: rgb(216, 251, 147);
+}
+.biolla-suagaolut .path14:before {
+  content: "\e937";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.biolla-suagaolut .path15:before {
+  content: "\e938";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.biolla-suagaolut .path16:before {
+  content: "\e939";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.biolla-suadauxanh .path1:before {
+  content: "\e93a";
+  color: rgb(226, 244, 180);
+}
+.biolla-suadauxanh .path2:before {
+  content: "\e93b";
+  margin-left: -1em;
+  color: rgb(216, 241, 160);
+}
+.biolla-suadauxanh .path3:before {
+  content: "\e93c";
+  margin-left: -1em;
+  color: rgb(246, 226, 102);
+}
+.biolla-suadauxanh .path4:before {
+  content: "\e93d";
+  margin-left: -1em;
+  color: rgb(246, 226, 102);
+}
+.biolla-suadauxanh .path5:before {
+  content: "\e93e";
+  margin-left: -1em;
+  color: rgb(246, 226, 102);
+}
+.biolla-suadauxanh .path6:before {
+  content: "\e93f";
+  margin-left: -1em;
+  color: rgb(200, 234, 115);
+}
+.biolla-suadauxanh .path7:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(183, 228, 69);
+}
+.biolla-suadauxanh .path8:before {
+  content: "\e941";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.biolla-suadauxanh .path9:before {
+  content: "\e942";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.biolla-suadauxanh .path10:before {
+  content: "\e943";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.biolla-suadauxanh .path11:before {
+  content: "\e944";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.biolla-hotline:before {
+  content: "\e900";
+}
+.biolla-game:before {
+  content: "\e904";
+}
+.biolla-dat-hang:before {
+  content: "\e905";
+}
