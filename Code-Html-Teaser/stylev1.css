@@ -275,3 +275,169 @@ body {
     font-weight: bold;
 	color: #58595B;
 }
+
+/* Menu */
+.nav_landing {
+    position: fixed;
+}
+
+.nav_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #444444;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.nav_link:hover {
+    background-color: #eeeeee;
+}
+
+.nav_link_active {
+    color: #C30E2E;
+}
+
+
+.nav_text {
+	display: none;
+}
+.nav_link:first-child {
+	background: #FFDD00;
+	color: #C30E2E;
+}
+.nav_link:last-child {
+	background: #C30E2E;
+	color: #ffffff;
+}
+.nav_link:nth-child(5) {
+	color: #440000;
+}
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}
+
+.nav_link:last-child i {
+	animation: heartbeat 3s infinite;
+}
+
+@media only screen and (max-width: 480px){
+	.nav_landing {
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 50px;
+		box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+		background-color: #ffffff;
+		display: flex;
+		overflow-x: auto;
+	}
+	.nav_icon {
+		font-size: 25px;
+	}
+	.nav_link_active .nav_icon {
+		font-size: 35px;
+	}
+}
+
+@media only screen and (min-width: 481px){
+	.nav_landing {
+		top: 15%;
+		right: 0;
+		width: 50px;
+		height: 300px;
+		box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+		background-color: #ffffff;
+		display: inline;
+	}
+	.nav_landing a {
+		clear: right;
+		float: right;
+		height: 50px;
+	}
+	.nav_icon {
+		font-size: 25px;
+	}
+	.nav_link_active .nav_icon {
+		font-size: 35px;
+	}
+}
+/*Font Icon*/
+@font-face {
+  font-family: 'biollamenuv1';
+  src:  url('fonts_biolla/biollamenuv1.eot?cuooxz');
+  src:  url('fonts_biolla/biollamenuv1.eot?cuooxz#iefix') format('embedded-opentype'),
+    url('fonts_biolla/biollamenuv1.ttf?cuooxz') format('truetype'),
+    url('fonts_biolla/biollamenuv1.woff?cuooxz') format('woff'),
+    url('fonts_biolla/biollamenuv1.svg?cuooxz#biollamenuv1') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="biolla-"], [class*=" biolla-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'biollamenuv1' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.biolla-hotline:before {
+  content: "\e900";
+}
+.biolla-suadauxanh:before {
+  content: "\e901";
+}
+.biolla-suagaolut:before {
+  content: "\e902";
+}
+.biolla-suabapnon:before {
+  content: "\e903";
+}
+.biolla-game:before {
+  content: "\e904";
+}
+.biolla-dat-hang:before {
+  content: "\e905";
+}
